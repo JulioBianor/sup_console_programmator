@@ -1,35 +1,49 @@
-programador flash SUP Console
-Tudo o que é apresentado aqui é feito por você em seu próprio perigo e risco.
-Programador de memória flash paralelo simples
+# SUP Console flash programmator
+## _Tudo o que é apresentado aqui é feito por você, por sua própria conta e risco._
 
-Construído sobre o acessível Arduino Mega 2560
-Detalhes adicionais mínimos
-Fácil de repetir
-Oportunidades
-Apagar, ler e escrever o chip de memória K5L2731CAA-D770 ou similares
-Controle do processo de transferência de dados entre o computador e o programador
-Controle do processo de gravação de dados no Flash
-Indicação de luz do processo (Escrita, Leitura, Apagamento, Erro)
-O comportamento do botão pode ser determinado (Através da fonte do firmware)
-Você pode exibir as informações do processo no display do programador (Através do código fonte do firmware)
-Alta velocidade: até 1Mbit/S (Você pode fazer mais alto, mas o desempenho do microcontrolador não permite aumentar a velocidade)
-Instalação projeto
-Python não inferior à versão 3.9.10 é necessário. Todas as operações são descritas para SO Windows com o GitBash instalado.
+Programador simples de memória flash paralela
 
-Deve ser realizada em nome do administrador.
-Clonando um repositório com GIT:
+- Construído com preços acessíveis Arduino Mega 2560
+- Detalhes adicionais mínimos
+- Fácil de repetir
 
+## Possibilidades
+
+- Apagar, ler e escrever chip de memória K5L2731CAA-D770 ou similar
+- Контроль процесса передачи данных между компьютером и программатором
+- Контроль процесса записи данных на Flash
+- Световая индикация процессов (Запись, Чтение, Стирание, Ошибка)
+- Можно определить поведение кнопок (Через исходный код прошивки)
+- Можно выводить информацию о процессе на дисплей программатора (Через исходный код прошивки)
+- Высокая скорость работы: до 1Mbit/S (Можно и выше, но производительность микроконтроллера не позволяет поднять скорость)
+
+## Установка проекта
+
+Необходим Python не ниже версии 3.9.10. Все операции описаны для ОС Windows с установленным GitBash.
+- Необходимо выполнять от имени администратора.
+
+Клонируем репозиторий с GIT:
+
+```sh
 git clone git@github.com:Promolife/sup_console_programmator.git
-Vamos ao diretório do projeto
+```
+Заходим в директорию проекта
 
+```sh
 cd sup_console_programmator
-Instale e ative o ambiente virtual
+```
+Устанавливаем и активируем виртуальное окружение
 
+```sh
 python -m venv venv
-fonte venv/scripts/ativar
-Atualizar pip e definir dependências
+source venv/Scripts/activate
+```
 
-python - m pip install --atualizar pip
-pip instalar pyserial
-Prontinho! Pode começar a usá-lo.
+Обновляем pip и устанавливаем зависимости
 
+```sh
+python -m pip install --upgrade pip
+pip install pyserial
+```
+
+Готово! Можно начинать использовать.
