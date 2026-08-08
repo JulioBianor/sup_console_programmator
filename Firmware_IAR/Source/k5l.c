@@ -55,6 +55,9 @@ void K5L_READ_INIT()
   Control_ddr = 0xFF;
   MByte_data_ddr = 0x00;
   LByte_data_ddr = 0x00;
+    
+  PORTE &= ~(1 << PE4); // Equivalente a digitalWrite(2, LOW), Joga o Pino 2 para LOW para o 74LVC245
+    
   SetBit(Control_port,Control_port_WP);
   K5L_SET_ADDRESS(0x00);
   K5L_SET_DATA(0x00);
@@ -109,6 +112,11 @@ void K5L_WRITE_INIT()
   Control_ddr = 0xFF;
   MByte_data_ddr = 0xFF;
   LByte_data_ddr = 0xFF;
+  
+  PORTE |= (1 << PE4); // Equivalente a digitalWrite(2, HIGH), Joga o Pino 2 para HIGH para o 74LVC245
+  
+  SetBit(Control_port,Control_port_WP); //[cite: 3]
+  // ...
   SetBit(Control_port,Control_port_WP);
   K5L_SET_ADDRESS(0xFFFFFFFF);
   K5L_SET_DATA(0xFFFF);
